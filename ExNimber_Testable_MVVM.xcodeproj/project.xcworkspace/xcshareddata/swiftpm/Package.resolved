@@ -1,6 +1,51 @@
 {
   "pins" : [
     {
+      "identity" : "cwlcatchexception",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/mattgallagher/CwlCatchException.git",
+      "state" : {
+        "revision" : "3b123999de19bf04905bc1dfdb76f817b0f2cc00",
+        "version" : "2.1.2"
+      }
+    },
+    {
+      "identity" : "cwlpreconditiontesting",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/mattgallagher/CwlPreconditionTesting.git",
+      "state" : {
+        "revision" : "dc9af4781f2afdd1e68e90f80b8603be73ea7abc",
+        "version" : "2.2.0"
+      }
+    },
+    {
+      "identity" : "nimble",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Quick/Nimble.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "ef552dcfc42948f29ffe50be8f935df6073df853"
+      }
+    },
+    {
+      "identity" : "quick",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Quick/Quick.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "cc96a4bd61f65798fd3f951ab1586d9d0a225c3f"
+      }
+    },
+    {
+      "identity" : "rxnimble",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/RxSwiftCommunity/RxNimble.git",
+      "state" : {
+        "revision" : "c21ba0cc2b5a73f7d5f79f0efde00b70c4364f70",
+        "version" : "6.3.1"
+      }
+    },
+    {
       "identity" : "rxswift",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/ReactiveX/RxSwift.git",

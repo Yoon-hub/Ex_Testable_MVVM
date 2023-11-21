@@ -21,6 +21,10 @@
 		F4EECC652B06EB780057B1F5 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F4EECC642B06EB780057B1F5 /* RxSwift */; };
 		F4EECC672B06F5990057B1F5 /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EECC662B06F5990057B1F5 /* Presentable.swift */; };
 		F4EECC692B06FC720057B1F5 /* TViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EECC682B06FC720057B1F5 /* TViewModel.swift */; };
+		F4EECC6B2B0C30FF0057B1F5 /* ViewControllerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EECC6A2B0C30FF0057B1F5 /* ViewControllerMock.swift */; };
+		F4EECC702B0C36EB0057B1F5 /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = F4EECC6F2B0C36EB0057B1F5 /* Quick */; };
+		F4EECC732B0C38BE0057B1F5 /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = F4EECC722B0C38BE0057B1F5 /* Nimble */; };
+		F4EECC762B0C3D520057B1F5 /* RxNimble in Frameworks */ = {isa = PBXBuildFile; productRef = F4EECC752B0C3D520057B1F5 /* RxNimble */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +61,7 @@
 		F4EECC5E2B06EB460057B1F5 /* ViewModelable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelable.swift; sourceTree = "<group>"; };
 		F4EECC662B06F5990057B1F5 /* Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
 		F4EECC682B06FC720057B1F5 /* TViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TViewModel.swift; sourceTree = "<group>"; };
+		F4EECC6A2B0C30FF0057B1F5 /* ViewControllerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +69,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4EECC702B0C36EB0057B1F5 /* Quick in Frameworks */,
+				F4EECC762B0C3D520057B1F5 /* RxNimble in Frameworks */,
+				F4EECC732B0C38BE0057B1F5 /* Nimble in Frameworks */,
 				F4EECC652B06EB780057B1F5 /* RxSwift in Frameworks */,
 				F4EECC632B06EB780057B1F5 /* RxCocoa in Frameworks */,
 			);
@@ -126,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				F4EECC402B06E9FD0057B1F5 /* ExNimber_Testable_MVVMTests.swift */,
+				F4EECC6A2B0C30FF0057B1F5 /* ViewControllerMock.swift */,
 			);
 			path = ExNimber_Testable_MVVMTests;
 			sourceTree = "<group>";
@@ -183,6 +192,9 @@
 			packageProductDependencies = (
 				F4EECC622B06EB780057B1F5 /* RxCocoa */,
 				F4EECC642B06EB780057B1F5 /* RxSwift */,
+				F4EECC6F2B0C36EB0057B1F5 /* Quick */,
+				F4EECC722B0C38BE0057B1F5 /* Nimble */,
+				F4EECC752B0C3D520057B1F5 /* RxNimble */,
 			);
 			productName = ExNimber_Testable_MVVM;
 			productReference = F4EECC262B06E9FC0057B1F5 /* ExNimber_Testable_MVVM.app */;
@@ -258,6 +270,9 @@
 			mainGroup = F4EECC1D2B06E9FC0057B1F5;
 			packageReferences = (
 				F4EECC602B06EB640057B1F5 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				F4EECC6E2B0C36EB0057B1F5 /* XCRemoteSwiftPackageReference "Quick" */,
+				F4EECC712B0C38BE0057B1F5 /* XCRemoteSwiftPackageReference "Nimble" */,
+				F4EECC742B0C3D510057B1F5 /* XCRemoteSwiftPackageReference "RxNimble" */,
 			);
 			productRefGroup = F4EECC272B06E9FC0057B1F5 /* Products */;
 			projectDirPath = "";
@@ -315,6 +330,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4EECC6B2B0C30FF0057B1F5 /* ViewControllerMock.swift in Sources */,
 				F4EECC412B06E9FD0057B1F5 /* ExNimber_Testable_MVVMTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -400,6 +416,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -463,6 +480,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -664,6 +682,30 @@
 				minimumVersion = 6.6.0;
 			};
 		};
+		F4EECC6E2B0C36EB0057B1F5 /* XCRemoteSwiftPackageReference "Quick" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Quick/Quick.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		F4EECC712B0C38BE0057B1F5 /* XCRemoteSwiftPackageReference "Nimble" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Quick/Nimble.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		F4EECC742B0C3D510057B1F5 /* XCRemoteSwiftPackageReference "RxNimble" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RxSwiftCommunity/RxNimble.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.3.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -676,6 +718,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = F4EECC602B06EB640057B1F5 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxSwift;
+		};
+		F4EECC6F2B0C36EB0057B1F5 /* Quick */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F4EECC6E2B0C36EB0057B1F5 /* XCRemoteSwiftPackageReference "Quick" */;
+			productName = Quick;
+		};
+		F4EECC722B0C38BE0057B1F5 /* Nimble */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F4EECC712B0C38BE0057B1F5 /* XCRemoteSwiftPackageReference "Nimble" */;
+			productName = Nimble;
+		};
+		F4EECC752B0C3D520057B1F5 /* RxNimble */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F4EECC742B0C3D510057B1F5 /* XCRemoteSwiftPackageReference "RxNimble" */;
+			productName = RxNimble;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

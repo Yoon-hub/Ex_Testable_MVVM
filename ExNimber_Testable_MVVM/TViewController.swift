@@ -114,7 +114,13 @@ class TViewController: UIViewController, Presentable {
                 vc.viewModel.input(.uploadButtonTap(text: vc.textField.text ?? ""))
             }
             .disposed(by: disposeBag)
-    
+        
+        tableView.rx.itemSelected
+            .bind(with: self) { vc, indexPath in
+                vc.viewModel.input(.removeText(IndexPath: indexPath))
+            }
+            .disposed(by: disposeBag)
+        
     }
     
     private func handleOutput(_ state: ViewModelType.State) {

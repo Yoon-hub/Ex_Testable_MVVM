@@ -14,6 +14,7 @@ final class TViewModel: ViewModelable {
     
     enum Action {
         case uploadButtonTap(text: String)
+        case removeText(IndexPath: IndexPath)
     }
     
     enum State {
@@ -43,6 +44,10 @@ final class TViewModel: ViewModelable {
             value.append(text)
             dependency.textList.accept(value)
             outputSubject.onNext(.clearTextField)
+        case .removeText(IndexPath: let indexPath):
+            var value = dependency.textList.value
+            value.remove(at: indexPath.row)
+            dependency.textList.accept(value)
         }
     }
 }
