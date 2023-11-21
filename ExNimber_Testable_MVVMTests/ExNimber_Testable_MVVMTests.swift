@@ -5,7 +5,7 @@
 //  Created by 윤제 on 11/17/23.
 //
 
-import XCTest
+import Foundation
 import RxSwift
 import RxCocoa
 import Nimble
@@ -38,7 +38,7 @@ final class ExNimber_Testable_MVVMTests: QuickSpec {
                 it("textList에 text가 추가되고 textField가 clear된다") {
                     expect(viewController.stateObservable)
                         .first(timeout: timeoutSeconds)
-                        .to(equal(.clearTextField))
+                        .toEventually(equal(.clearTextField))
 
                     expect(viewModel.dependency.textList.value.count)
                         .to(equal(1))
@@ -58,10 +58,6 @@ final class ExNimber_Testable_MVVMTests: QuickSpec {
                 }
             }
         }
-        
-        
-        
-        
     }
 
 }
