@@ -7,6 +7,9 @@
 
 import UIKit
 
+import RxSwift
+import RxCocoa
+
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
@@ -19,7 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let scene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: scene)
         
-        let viewController = ViewController()
+        let viewController = TViewController(viewModel: TViewModel(dependency: .init(textList: BehaviorRelay(value: []))))
         window?.rootViewController = viewController
         window?.makeKeyAndVisible()
         
