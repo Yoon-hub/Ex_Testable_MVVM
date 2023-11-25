@@ -18,14 +18,16 @@ final class TViewModel: ViewModelable {
     }
     
     enum State {
-        case clearTextField
+        case updateTextList([String])
     }
     
     struct Dependency {
-        var textList: BehaviorRelay<[String]>
+        
     }
     
-    var dependency: Dependency
+    var textList = BehaviorRelay<[String]>(value: [])
+    
+    let dependency: Dependency
     
     init(dependency: Dependency) {
         self.dependency = dependency
@@ -40,14 +42,15 @@ final class TViewModel: ViewModelable {
     func input(_ action: Action) {
         switch action {
         case .uploadButtonTap(let text):
-            var value = dependency.textList.value
+            var value = textList.value
             value.append(text)
-            dependency.textList.accept(value)
-            outputSubject.onNext(.clearTextField)
+            textList.accept(value)
+            outputSubject.onNext(.updateTextList(value))
         case .removeText(IndexPath: let indexPath):
-            var value = dependency.textList.value
+            var value = textList.value
             value.remove(at: indexPath.row)
-            dependency.textList.accept(value)
+            textList.accept(value)
+            outputSubject.onNext(.updateTextList(value))
         }
     }
 }

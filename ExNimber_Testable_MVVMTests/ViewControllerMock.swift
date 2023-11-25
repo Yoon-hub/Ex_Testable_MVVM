@@ -6,7 +6,8 @@
 //
 
 import UIKit
-@testable import RxSwift
+import RxCocoa
+import RxSwift
 @testable import ExNimber_Testable_MVVM
 
 final class ViewControllerMock<T: ViewModelable>: Presentable {
@@ -26,5 +27,17 @@ final class ViewControllerMock<T: ViewModelable>: Presentable {
         viewModel.output
             .observe(on: MainScheduler.instance)
             .bind(to: stateRelay)
+    }
+}
+    
+extension TViewModel.State: Equatable {
+    
+    public static func == (lhs: Self, rhs: Self) -> Bool {
+        switch (lhs, rhs) {
+        case let (.updateTextList(lhsCount), .updateTextList(rhsCount)):
+            return lhsCount == rhsCount
+        default:
+            return false
+        }
     }
 }

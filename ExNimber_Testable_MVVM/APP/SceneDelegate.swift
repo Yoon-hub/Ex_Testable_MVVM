@@ -22,7 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let scene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: scene)
         
-        let viewController = TViewController(viewModel: TViewModel(dependency: .init(textList: BehaviorRelay(value: []))))
+        let viewController = TViewController(viewModel: TViewModel(dependency: .init()))
         window?.rootViewController = viewController
         window?.makeKeyAndVisible()
         

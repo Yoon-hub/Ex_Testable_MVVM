@@ -89,7 +89,7 @@ class TViewController: UIViewController, Presentable {
             upLoadButton.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor)
         ])
         
-        viewModel.dependency.textList
+        viewModel.textList
             .bind(to: tableView.rx.items(cellIdentifier: "CustomTableViewCell", cellType: CustomTableViewCell.self)) { index, element, cell in
                 cell.customLabel.text = element
             }
@@ -125,8 +125,10 @@ class TViewController: UIViewController, Presentable {
     
     private func handleOutput(_ state: ViewModelType.State) {
         switch state {
-        case .clearTextField:
-            textField.text = ""
+        case .updateTextList(let value):
+            print(value)
+        default:
+            break
         }
     }
 
